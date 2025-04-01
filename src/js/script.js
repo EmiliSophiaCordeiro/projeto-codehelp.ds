@@ -18,7 +18,7 @@ startButton.addEventListener('click', () => {
 const forumButton = document.querySelector('#community button')
 forumButton.addEventListener('click', () => {
     alert('Em breve, você poderá acessar o fórum da comunidade!')
-    // window.location.href = 'forum.html'
+    
 })
 
 
@@ -42,8 +42,11 @@ const toggleButton = document.querySelector('#features button')
 const featuresList = document.querySelector('#features .features-list')
 
 toggleButton.addEventListener('click', () => {
-    if (featuresList.style.display === 'none' || featuresList.style.display === '') {
-        featuresList.style.display = 'block'
+    if (featuresList.style.display === 'flex') {
+        featuresList.style.display = 'none'
+        toggleButton.textContent = 'Mostrar Recursos'
+    } else if (featuresList.style.display === 'none'){
+        featuresList.style.display = 'flex'
         toggleButton.textContent = 'Ocultar Recursos'
     } else {
         featuresList.style.display = 'none'
